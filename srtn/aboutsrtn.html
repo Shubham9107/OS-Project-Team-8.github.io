@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>CPU Scheduling Algorithms</title>
+    
+    <!--CSS and Script linking-->
+    <link rel="stylesheet" href="abt.css">    
+  </head>
+  <body>
+    <header>
+      <nav id="header-nav" class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+  
+            <div class="navbar-brand">
+              <h1 class="section-title">
+                SRTN <span>CPU</span> SCHEDULING <span> ALGORITHM </span>
+              </h1>
+            </div>
+  
+           
+          </div>
+    
+    <div class="srtninfo">
+      <p class="hd"><b>What is CPU scheduling Algorithm?</b></p>
+      
+      <div id="intro">
+        CPU scheduling is an important part of modern operating systems that deals with the allocation of CPU time among multiple processes. With the advent of multi-core processors and the need for efficient use of system resources, CPU scheduling has become increasingly important. In this essay, we will provide a comprehensive overview of CPU scheduling, its objectives, and the different scheduling algorithms that are commonly used.
+
+        Objectives of CPU Scheduling
+
+        The primary objective of CPU scheduling is to maximize the utilization of the CPU, which is achieved by keeping it busy all the time. The second objective is to ensure that all processes are given a fair share of CPU time so that none of them are starved of resources. The third objective is to ensure that the response time of the system is kept to a minimum, so that users do not experience significant delays when interacting with the system.
+
+        Types of CPU Scheduling
+
+        There are two main types of CPU scheduling: 
+        <ol>
+            <li><b>Preemptive : </b></li><br>
+            In a non-preemptive scheduling system, once a process has been allocated the CPU, it will keep it until it either voluntarily relinquishes it, or it blocks (e.g. waiting for I/O). This type of scheduling is generally less efficient, as it may result in long wait times for processes that are blocked, and there is no way to interrupt a process that is using the CPU.<br>
+            <br><li><b>Non-preemptive : </b></li><br>
+            In a preemptive scheduling system, the operating system may interrupt a process that is currently using the CPU in order to allocate it to another process. This type of scheduling is generally more efficient, as it allows the operating system to make better use of the CPU by allocating it to the process that needs it the most.
+        </ol> 
+      </div>
+
+      
+      <p class="hd"><b>Why do we need CPU Algorithm?</b></p>
+
+      <div id="why">
+        CPU scheduling is a critical component of modern operating systems, and it is necessary for several reasons. The first reason is to ensure that the CPU is used efficiently. In a multi-user system, there may be many processes that are competing for CPU time, and it is essential to allocate CPU time in a way that maximizes overall system performance. By scheduling CPU time among multiple processes, the operating system can ensure that the CPU is used as efficiently as possible, reducing the wait times for each process and improving overall system performance.
+
+        The second reason why CPU scheduling is necessary is to ensure that all processes are given a fair share of CPU time. Without CPU scheduling, some processes may monopolize the CPU, which can lead to other processes being starved of CPU time. This can lead to performance degradation and even system crashes. By scheduling CPU time among multiple processes, the operating system can ensure that each process is given a fair share of CPU time, and that no process is starved of CPU time.
+        
+        The third reason why CPU scheduling is necessary is to ensure that the system is responsive. In a real-time system, it is essential to minimize the time between a user's request and the system's response. If the CPU is busy executing a long-running process, it may take a long time for the system to respond to user requests. By scheduling CPU time among multiple processes, the operating system can ensure that the system remains responsive, even when executing long-running processes.
+        
+        Hence, CPU scheduling is necessary to ensure that the CPU is used efficiently, all processes are given a fair share of CPU time, and the system remains responsive. Without CPU scheduling, system performance may suffer, and the system may become unresponsive or even crash.
+
+      </div>
+      <br><br>
+      <div class="foot">
+        <a href="/srtn/SRTNALGO.html" class="btn">Run Algorithm</a>
+        <a href="/index.html" class="btn">Back Home</a>
+      </div>
+  </body>
+
+</html>

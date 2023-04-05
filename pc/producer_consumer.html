@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Producer-Consumer</title>
+  <div>
+    <link rel="stylesheet" href="pc.css" />
+  </div>
+</head>
+
+<body>
+  <header>
+    <div class="home">
+      <a href="/index.html" data-after="Home">Back Home</a>
+    </div>
+  </header>
+  <header>
+    <h1 class="section-title">PRODUCER <span> CONSUMER </span> BOUNDED <span> BUFFER </span></h1>
+  </header><br><br>
+
+  <div class="tb">
+    <label for="input">
+      <p>Enter Buffer Size : </p>
+    </label>
+    <input type="number" id="bs" name="buffer_size" placeholder="Buffer Size" min="1" />
+    <br><br>
+    <label for="input">
+      <p>Enter Producer Items To Be Produced : </p>
+    </label>
+    <input type="number" id="pro" name="producer" placeholder="Producer Value" min="1" />
+    <br><br>
+    <label for="input">
+      <p>Enter Consumer Items To Be Consumed : </p>
+    </label>
+    <input type="number" id="con" name="consumer" placeholder="Consumer Value" min="1" />
+
+  </div>
+  <br>
+  <div class="foot">
+    <a id="submit" onclick="input()" class="btn">Calculate</a>
+    <!--<a onclick="consumeRem()" class="btn">Consume Remaning Items</a>-->
+    <a onclick="resetform()" class="btn">Reset</a>
+    <button type="submit" class="btn">Submit</button>
+    </form>
+
+  </div>
+  </table>
+  <br><br>
+  <br><br>
+  <br><br><br>
+  </h3>
+  <div class="show" style="visibility: visible;">
+    <div id="output"></div>
+  </div>
+  <br><br><br>
+  <script src="pc.js"></script>
+</body>
+
+</html>

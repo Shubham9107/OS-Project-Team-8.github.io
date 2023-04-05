@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>Disk Scheduling Algorithms</title>
+    
+    <!--CSS and Script linking-->
+    <link rel="stylesheet" href="sstfabt.css">
+  </head>
+  <body>
+    <header>
+      <nav id="header-nav" class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <div class="navbar-brand">
+              <h1 class="section-title">
+                SSTF <span> DISK </span> SCHEDULING <span>ALGORITHM</span>
+              </h1>
+            </div>
+          </div>
+          <br>
+              </li>
+            </ul><!-- #nav-list -->
+          </div><!-- .collapse .navbar-collapse -->
+        </div><!-- .container -->
+      </nav><!-- #header-nav -->
+    </header>
+    
+    <div class="diskinfo">
+      <p class="hd"><b>What are Disk Scheduling Algorithms?</b></p>
+      
+      <div id="intro">
+          A process needs two type of time, CPU time and IO time. For I/O, it requests the Operating system to access the disk.However, the operating system must be fare enough to satisfy each request and at the same time, operating system must maintain the efficiency and speed of process execution.The technique that operating system uses to determine the request which is to be satisfied next is called disk scheduling.Disk scheduling is done by operating systems to schedule I/O requests arriving for the disk. Disk scheduling is also known as I/O Scheduling.
+        </div>
+      <div id="terms">
+        <ul><span id="hd2"><b>Some important terminologies :</b></span><br></ul>
+       <ol><li><b id="bold">Seek Time</b>
+        - <br>Seek time is the time taken in locating the disk arm to a specified track where the read/write request will be satisfied.<br><br></li>
+        <li><b id="bold">Rotational Latency</b> 
+        - <br>It is the time taken by the desired sector to rotate itself to the position from where it can access the R/W heads.<br><br></li>
+        <li><b id="bold">Transfer Time</b>
+        - <br> It is the time taken to transfer the data.<br><br></li>
+        <li><b id="bold"> Disk Access Time</b>
+        - <br>Disk access time is given as, <br>Disk Access Time = Rotational Latency + Seek Time + Transfer Time<br><br></li>
+        <li><b id="bold">Disk Response Time:</b> 
+        - <br>It is the average of time spent by each request waiting for the IO operation.
+      </li></ol></div>
+
+      
+      <p class="hd"><b>Why do we need Disk Scheduling Algorithms?</b></p>
+
+      <div id="why">
+        Disk scheduling is important because:
+        <ul>
+          <li>Multiple I/O requests may arrive by different processes and only one I/O request can be served at a time by the disk controller.Thus other I/O requests need to wait in the waiting queue and need to be scheduled.</li>
+          <li>Two or more request may be far from each other so can result in greater disk arm movement.</li>
+          <li>Hard drives are one of the slowest parts of the computer system and thus need to be accessed in an efficient manner.</li>
+        </ul>
+
+      </div>
+      <div class="foot">
+        <a href="/sstf/sstf.html" class="btn">Run Algorithm</a>
+        <a href="/index.html" class="btn">Back Home</a>
+      </div>
+
+  </body>
+
+</html>
