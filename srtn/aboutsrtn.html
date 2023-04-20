@@ -40,9 +40,9 @@
         There are two main types of CPU scheduling: 
         <ol>
             <li><b>Preemptive : </b></li><br>
-            In a non-preemptive scheduling system, once a process has been allocated the CPU, it will keep it until it either voluntarily relinquishes it, or it blocks (e.g. waiting for I/O). This type of scheduling is generally less efficient, as it may result in long wait times for processes that are blocked, and there is no way to interrupt a process that is using the CPU.<br>
+            In a preemptive scheduling system, the operating system may interrupt a process that is currently using the CPU in order to allocate it to another process. This type of scheduling is generally more efficient, as it allows the operating system to make better use of the CPU by allocating it to the process that needs it the most.<br>
             <br><li><b>Non-preemptive : </b></li><br>
-            In a preemptive scheduling system, the operating system may interrupt a process that is currently using the CPU in order to allocate it to another process. This type of scheduling is generally more efficient, as it allows the operating system to make better use of the CPU by allocating it to the process that needs it the most.
+           In a non-preemptive scheduling system, once a process has been allocated the CPU, it will keep it until it either voluntarily relinquishes it, or it blocks (e.g. waiting for I/O). This type of scheduling is generally less efficient, as it may result in long wait times for processes that are blocked, and there is no way to interrupt a process that is using the CPU.
         </ol> 
       </div>
 
