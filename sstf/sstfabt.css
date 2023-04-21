@@ -54,3 +54,11 @@ body {
     background-color: crimson;
   }
   
+img {
+    border: 2px solid black;
+  }
+  img:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    
+  }
