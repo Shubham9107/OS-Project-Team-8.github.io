@@ -29,35 +29,65 @@
       <p class="hd"><b>What is CPU scheduling Algorithm?</b></p>
       
       <div id="intro">
-        CPU scheduling is an important part of modern operating systems that deals with the allocation of CPU time among multiple processes. With the advent of multi-core processors and the need for efficient use of system resources, CPU scheduling has become increasingly important. In this essay, we will provide a comprehensive overview of CPU scheduling, its objectives, and the different scheduling algorithms that are commonly used.
+        Shortest Remaining Time Next (SRTN) is a CPU scheduling algorithm that is similar to Shortest Job First (SJF) algorithm. The key difference between SRTN and SJF is that SRTN is preemptive while SJF is non-preemptive. In SRTN, the processor switches from one process to another based on their remaining burst time, whereas in SJF, the processor switches from one process to another based on their arrival time and total burst time.
 
-        Objectives of CPU Scheduling
+In SRTN, the operating system selects the process with the shortest remaining burst time and allocates the CPU to that process. If a new process arrives with a shorter burst time than the currently executing process, the operating system preempts the currently executing process and allocates the CPU to the new process. This is done to minimize the average waiting time and turnaround time of the processes.
 
-        The primary objective of CPU scheduling is to maximize the utilization of the CPU, which is achieved by keeping it busy all the time. The second objective is to ensure that all processes are given a fair share of CPU time so that none of them are starved of resources. The third objective is to ensure that the response time of the system is kept to a minimum, so that users do not experience significant delays when interacting with the system.
+SRTN can be more efficient than SJF in situations where the process arrival times are not known in advance, and the burst times are highly variable. In such cases, SJF may cause some processes to wait for a long time, leading to high average waiting time and turnaround time. However, SRTN can lead to starvation of longer processes if there are a large number of short processes. In such cases, the longer processes may never get a chance to execute, leading to high average waiting time and turnaround time for those processes.
 
-        Types of CPU Scheduling
+One of the main advantages of SRTN is that it is a preemptive algorithm, which means that it can respond quickly to new processes that require the CPU. This can help to minimize the response time of interactive applications, which require quick responses from the CPU. Additionally, SRTN can help to minimize the average waiting time and turnaround time of processes, which can help to improve the overall performance of the system.
+
+However, SRTN can be complex to implement, as it requires the operating system to keep track of the remaining burst time of each process and to preempt processes when necessary. Additionally, SRTN can lead to starvation of longer processes if there are a large number of short processes. This can result in high average waiting time and turnaround time for those processes, which can be a significant disadvantage of the algorithm.
+
+In conclusion, SRTN is a CPU scheduling algorithm that selects the process with the shortest remaining burst time and allocates the CPU to that process. It is a preemptive algorithm that can respond quickly to new processes and help to minimize the average waiting time and turnaround time of processes. However, it can be complex to implement and can lead to starvation of longer processes if there are a large number of short processes.
+<br><br>
+<br><img src="../img/abtsrtn.png" alt="srtn" style="float: right; margin-right: 40px; width: 350px; height: 350px;">
+<p class="hd"><b>Types of CPU Scheduling</b></p>
+<br>
 
         There are two main types of CPU scheduling: 
+        
         <ol>
-            <li><b>Preemptive : </b></li><br>
-            In a preemptive scheduling system, the operating system may interrupt a process that is currently using the CPU in order to allocate it to another process. This type of scheduling is generally more efficient, as it allows the operating system to make better use of the CPU by allocating it to the process that needs it the most.<br>
+          <div class="container">
+            
+            <p><li><b>Preemptive : </b></li><br>
+              In a preemptive scheduling system, the operating system may interrupt a process that is currently using the CPU in order to allocate it to another process. This type of scheduling is generally more efficient, as it allows the operating system to make better use of the CPU by allocating it to the process that needs it the most.<br></p>
+          </div>
+      
+
+            
             <br><li><b>Non-preemptive : </b></li><br>
            In a non-preemptive scheduling system, once a process has been allocated the CPU, it will keep it until it either voluntarily relinquishes it, or it blocks (e.g. waiting for I/O). This type of scheduling is generally less efficient, as it may result in long wait times for processes that are blocked, and there is no way to interrupt a process that is using the CPU.
         </ol> 
       </div>
-
+<br>
       
-      <p class="hd"><b>Why do we need CPU Algorithm?</b></p>
+      <p class="hd"><b>Advantages of Shortest Remaining Time Next algorithm</b></p>
 
       <div id="why">
-        CPU scheduling is a critical component of modern operating systems, and it is necessary for several reasons. The first reason is to ensure that the CPU is used efficiently. In a multi-user system, there may be many processes that are competing for CPU time, and it is essential to allocate CPU time in a way that maximizes overall system performance. By scheduling CPU time among multiple processes, the operating system can ensure that the CPU is used as efficiently as possible, reducing the wait times for each process and improving overall system performance.
-
-        The second reason why CPU scheduling is necessary is to ensure that all processes are given a fair share of CPU time. Without CPU scheduling, some processes may monopolize the CPU, which can lead to other processes being starved of CPU time. This can lead to performance degradation and even system crashes. By scheduling CPU time among multiple processes, the operating system can ensure that each process is given a fair share of CPU time, and that no process is starved of CPU time.
+        <ul>
+          <li>
+            It is optimal in terms of minimizing average waiting time and turnaround time, as it prioritizes processes with the shortest remaining burst time.
+          </li>
+          <li>It works well in systems where there are many short processes, as they are executed quickly, reducing their waiting and turnaround times.
+            </li>
+            <li>It can improve system throughput, as shorter processes are completed faster, freeing up the CPU for other processes.</li>
+        </ul>
         
-        The third reason why CPU scheduling is necessary is to ensure that the system is responsive. In a real-time system, it is essential to minimize the time between a user's request and the system's response. If the CPU is busy executing a long-running process, it may take a long time for the system to respond to user requests. By scheduling CPU time among multiple processes, the operating system can ensure that the system remains responsive, even when executing long-running processes.
         
-        Hence, CPU scheduling is necessary to ensure that the CPU is used efficiently, all processes are given a fair share of CPU time, and the system remains responsive. Without CPU scheduling, system performance may suffer, and the system may become unresponsive or even crash.
 
+      </div>
+      <p class="hd"><b>Disadvantages of Shortest Remaining Time Next Algorithm</b></p>
+
+      <div id="why">
+        <ul>
+          <li>It requires knowledge of the burst time of each process, which may not be available in some systems.</li>
+            <li>
+            It can suffer from starvation, where long processes with a high burst time may never get a chance to execute if shorter processes keep arriving.</li>
+            <li>It can cause frequent context switches, which can result in overhead and decrease overall system performance.</li>
+        </ul>
+        
+        
       </div>
       <br><br>
       <div class="foot">
